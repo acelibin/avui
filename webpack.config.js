@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'npmComAlert.js',
+    filename: 'index.js',
     library: 'npmComAlert',
     libraryTarget: 'umd',
   },
@@ -64,12 +64,12 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
+        test: /\.(woff|woff2|eot|ttf|svg|jpg|png|gif)\??.*$/,
+        loader: 'url-loader',
+        query: {
+          esModule: false,
         }
-      }
+      },
     ]
   },
   resolve: {
@@ -99,7 +99,7 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
+      sourceMap: false,
       compress: {
         warnings: false
       }

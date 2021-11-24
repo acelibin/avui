@@ -2,9 +2,7 @@
   <div class="npm-com-alert" :class="className" v-show="visible">
     <div class="mask">
       <div class="box">
-        <div class="close" v-if="closable" @click="visible=!visible">
-          <img src="./assets/icon-close.png" alt="">
-        </div>
+        <div class="close" v-if="closable" @click="visible=!visible"></div>
         <div class="title" v-if="title" v-html="title"></div>
         <div class="text" v-if="text" v-html="text"></div>
         <div class="btn" v-if="btnTitle">
@@ -100,12 +98,12 @@
         position: absolute;
         right: 0;
         top: -43px;
-
-        img {
-          width: 25px;
-          height: 43px;
-          display: block;
-        }
+        width: 25px;
+        height: 43px;
+        background-image: url('./icon/close.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px 43px;
       }
 
       .title {
