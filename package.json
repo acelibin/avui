@@ -1,7 +1,7 @@
 {
   "name": "npm-com-alert",
   "description": "A common alert plugin",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "author": "libin <acelibin@gmail.com>",
   "license": "MIT",
   "repository": {
