@@ -5,13 +5,8 @@
 </template>
 
 <script>
-// import "babel-polyfill";
 export default {
   name: 'App',
-  data () {
-    return {
-    }
-  },
   methods: {
     handleClick () {
       this.$alert({
